@@ -4,13 +4,11 @@ import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
-import { sanitizeHtmlPipe } from './sanitize-html.pipe';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    sanitizeHtmlPipe
+    AppComponent
   ],
   imports: [
     BrowserModule,
