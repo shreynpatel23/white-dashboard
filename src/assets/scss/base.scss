@@ -1,0 +1,215 @@
+@import "~bootstrap/scss/bootstrap";
+@import 'variable.scss';
+
+
+input:focus, button:focus
+.form-control:focus,
+.btn:focus,
+.form-group:focus {
+	box-shadow: none;
+	outline: none;
+	outline-color:transparent;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.modal-backdrop {
+	z-index: -1;
+  }
+
+
+.relative {
+	position: relative;
+}
+
+.fixed {
+	position: fixed;
+}
+
+.absolute {
+	position: absolute;
+}
+
+
+
+.relative {
+    position: relative;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.absolute {
+    position: absolute;
+}
+
+// font-sizes
+.font-clr {
+    color: $violet;
+}
+
+.f-9 {
+    font-size: $font-9;
+}
+
+.f-12 {
+    font-size: $font-12;
+}
+
+.f-16 {
+    font-size: $font-16;
+}
+
+.f-18 {
+    font-size: $font-18;
+}
+
+.f-35 {
+    font-size: $font-35;
+}
+
+.task-info {
+    color: $task-info;
+}
+
+.common-task {
+    color: $common-task
+}
+
+.warm-grey {
+    color: $warm-grey;
+}
+
+.file-blue {
+    color: $file-blue;
+}
+
+.task-high {
+    color: $task-high;
+}
+
+.task-mid {
+    color: $task-mid;
+}
+
+.task-low {
+    color: $task-low;
+}
+
+.tag-indigo {
+    color: $tag-indigo;
+}
+
+.userName {
+    color: $common-task;
+}
+
+.file-blue {
+    color: $file-blue;
+}
+
+.white {
+    color: $white;
+}
+
+.score {
+    color: $blue-grey;
+}
+
+.navhr {
+    color: $navhr;
+}
+
+.f-9-1 {
+    font-size: $font-9;
+    font-family: 'Poppins-Regular';
+}
+
+.f-9-2 {
+    font-size: $font-9;
+    font-family: 'Poppins-Medium';
+}
+
+.f-9-3 {
+    font-size: $font-9;
+    font-family: 'Poppins-SemiBold';
+}
+
+.f-12-1 {
+    font-size: $font-12;
+    font-family: 'Poppins-Regular';
+}
+
+.f-12-2 {
+    font-size: $font-12;
+    font-family: 'Poppins-Medium';
+}
+
+.f-12-3 {
+    font-size: $font-12;
+    font-family: 'Poppins-SemiBold';
+}
+
+.f-16-1 {
+    font-size: $font-16;
+    font-family: 'Poppins-Regular';
+}
+
+.f-16-2 {
+    font-size: $font-16;
+    font-family: 'Poppins-Medium';
+}
+
+.f-16-3 {
+    font-size: $font-16;
+    font-family: 'Poppins-SemiBold';
+}
+.f-18-1 {
+    font-size: $font-18;
+    font-family: 'Poppins-Regular';
+}
+
+.f-18-2 {
+    font-size: $font-18;
+}
+
+.f-18-3 {
+    font-size: $font-18;
+    font-family: 'Poppins-SemiBold';
+}
+
+.f-35-1 {
+    font-size: $font-35;
+    font-family: 'Poppins-Regular';
+}
+
+.f-35-2 {
+    font-size: $font-35;
+    font-family: 'Poppins-Medium';
+}
+
+.f-35-3 {
+    font-size: $font-35;
+    font-family: 'Poppins-SemiBold';
+}
+
+textarea{
+    resize: none;
+}
+
+input {
+    outline: none;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+button:focus {
+    outline: none;
+}

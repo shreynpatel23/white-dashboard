@@ -1,0 +1,195 @@
+@import'../assets/scss/base.scss';
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    opacity: 0.9;
+}
+.back{
+    width: 100%;
+    background-color: #43425d;
+    color: #fff;
+    min-height: 100vh;
+    height: 100%;
+    a{
+      text-decoration: none;
+  }
+}
+.first-element-back{
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.hover:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.link-text{
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+.back1{
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.04);
+  width: 100%;
+}
+.border1{
+    border-right: 2px solid #ebebf2;
+}
+#statistics a:hover{
+    background-color: #fff;
+    color: #000;
+}
+#table a:hover{
+    background-color: #fff;
+    color: #3b86ff;
+}
+.form-control{
+    border:0;
+    padding: 0;
+    color: #4d4f5c;
+}
+.search-text:focus{
+    box-shadow: none;
+    outline: 0;
+}
+.search-text::-webkit-input-placeholder {
+    font-size: 10px;
+  line-height: 1.54;
+  letter-spacing: normal;
+  text-align: left;
+  color: #4d4f5c;
+}
+
+/* ---------------------------------------------------
+    Overview STYLE
+----------------------------------------------------- */
+.text1{
+font-size: 28px;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: left;
+  color: #43425d;
+}
+.text2{
+    opacity: 0.5;
+    font-size: 15px;
+  line-height: 1.67;
+  letter-spacing: normal;
+  text-align: left;
+  color: #43425d;
+}
+.text3{
+    font-size: 25px;
+    font-family: $font-semibold;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #4d4f5c;
+}
+.text4{
+    font-family: $font-semibold;
+  line-height: 1.27;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ff4141;
+}
+.text5{
+    font-family: $font-semibold;
+  line-height: 1.27;
+  letter-spacing: normal;
+  text-align: left;
+  color: #3cc480;
+}
+.text6{
+  font-size: 18px;
+  line-height: 0.72;
+  letter-spacing: normal;
+  text-align: left;
+  color: #4d4f5c;
+}
+.text7{
+  line-height: 1.54;
+  letter-spacing: normal;
+  text-align: left;
+  color: #4d4f5c;
+}
+.text8{
+  line-height: 1.54;
+  letter-spacing: normal;
+  text-align: left;
+  color: #3b86ff;
+}
+.text9{
+  line-height: 1.23;
+  letter-spacing: normal;
+  text-align: left;
+  color: #a3a6b4;
+}
+.btn1{
+     box-shadow: 0 2px 3px 0 rgba(0, 0, 0 , 0.05);
+}
+.back-shadow{
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.04);
+}
+.bg-color{
+    background-color: #f5f6fa;
+}
+.outer-circle1{
+        width: 14px;
+        height: 14px;
+        border: solid 2px #a3a1fb;
+        padding: 2.5px;
+        border-radius: 50%;
+
+}
+.outer-circle2{
+        width: 14px;
+        height: 14px;
+        border: solid 2px #50d8bb;
+        padding: 2.5px;
+        border-radius: 50%;
+
+}
+.outer-circle3{
+        width: 14px;
+        height: 14px;
+        border: solid 2px #ffa167;
+        padding: 2.5px;
+        border-radius: 50%;
+
+}
+.outer-circle4{
+        width: 14px;
+        height: 14px;
+        border: solid 2px #ff7cc3;
+        padding: 2.5px;
+        border-radius: 50%;
+
+}
+.outer-circle5{
+        width: 14px;
+        height: 14px;
+        border: solid 2px #81c9ff;
+        padding: 2.5px;
+        border-radius: 50%;
+
+}
+.outer-circle6{
+        width: 14px;
+        height: 14px;
+        border: solid 2px #ff8474;
+        padding: 2.5px;
+        border-radius: 50%;
+
+}

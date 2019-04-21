@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 10">
+    <defs>
+        <style>
+            .cls-1{fill:#3cc480}
+        </style>
+    </defs>
+    <path id="UpArrow" d="M9 9V4a.945.945 0 0 0-1-1 .945.945 0 0 0-1 1v5H4l4 4 4-4z" class="cls-1" transform="rotate(180 6 6.5)"/>
+</svg>

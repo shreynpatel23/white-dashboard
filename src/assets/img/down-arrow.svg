@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 10">
+    <defs>
+        <style>
+            .cls-1{fill:#ff4141}
+        </style>
+    </defs>
+    <path id="DownArrow" d="M9 9V4a.945.945 0 0 0-1-1 .945.945 0 0 0-1 1v5H4l4 4 4-4z" class="cls-1" transform="translate(-4 -3)"/>
+</svg>

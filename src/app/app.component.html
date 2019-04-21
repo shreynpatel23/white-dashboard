@@ -1,20 +1,670 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="wrapper">
+    <div class="container-fluid p-0">
+        <div class="row no-gutters">
+            <div [ngClass]="{'col-xl-2' : sideBarActive , 'col-xl-1' : !sideBarActive , 'col-md-3' : sideBarActive , 'col-md-1' : !sideBarActive}">
+                <!-- Sidebar Active  -->
+                <div *ngIf="sideBarActive" class="sticky-top">
+                    <div class="back">
+                        <div class="d-flex justify-content-center hover first-element-back" (click)="onshowCollapse()">
+                            <div class="px-3 py-4">
+                                <a href="#" class="text-white">IMPEKABLE</a>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start hover">
+                            <div class="px-3 py-4" (click)="onshowCollapse()">
+                                <a href="#">
+                                    <div class="d-flex align-items-center">
+                                        <div class="pl-4">
+                                            <img src="../assets/img/Home.svg" alt="" width="15px" height="15px">
+                                        </div>
+                                        <div class="px-2">
+                                            <p class="link-text m-0">Home</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start hover">
+                            <div class="px-3 py-4" (click)="onshowCollapse()">
+                                <a href="#">
+                                    <div class="d-flex align-items-center">
+                                        <div class="pl-4">
+                                            <img src="../assets/img/Dashboard.svg" alt="" width="15px" height="15px">
+                                        </div>
+                                        <div class="px-2">
+                                            <p class="link-text m-0">dashboard</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start hover">
+                            <div class="px-3 py-4" (click)="onshowCollapse()">
+                                <a href="#">
+                                    <div class="d-flex align-items-center">
+                                        <div class="pl-4">
+                                            <img src="../assets/img/Inbox.svg" alt="" width="15px" height="15px">
+                                        </div>
+                                        <div class="px-2">
+                                            <p class="link-text m-0">Inbox</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start hover">
+                            <div class="px-3 py-4" (click)="onshowCollapse()">
+                                <a href="#">
+                                    <div class="d-flex align-items-center">
+                                        <div class="pl-4">
+                                            <img src="../assets/img/Products.svg" alt="" width="15px" height="15px">
+                                        </div>
+                                        <div class="px-2">
+                                            <p class="link-text m-0">Products</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start hover">
+                            <div class="px-3 py-4" (click)="onshowCollapse()">
+                                <a href="#">
+                                    <div class="d-flex align-items-center">
+                                        <div class="pl-4">
+                                            <img src="../assets/img/Invoices.svg" alt="" width="15px" height="15px">
+                                        </div>
+                                        <div class="px-2">
+                                            <p class="link-text m-0">Invoices</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start hover">
+                            <div class="px-3 py-4" (click)="onshowCollapse()">
+                                <a href="#">
+                                    <div class="d-flex align-items-center">
+                                        <div class="pl-4">
+                                            <img src="../assets/img/Customers.svg" alt="" width="15px" height="15px">
+                                        </div>
+                                        <div class="px-2">
+                                            <p class="link-text m-0">Customers</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start hover">
+                            <div class="px-3 py-4" (click)="onshowCollapse()">
+                                <a href="#">
+                                    <div class="d-flex align-items-center">
+                                        <div class="pl-4">
+                                            <img src="../assets/img/Chat Room.svg" alt="" width="15px" height="15px">
+                                        </div>
+                                        <div class="px-2">
+                                            <p class="link-text m-0">Chat Room</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start hover">
+                            <div class="px-3 py-4" (click)="onshowCollapse()">
+                                <a href="#">
+                                    <div class="d-flex align-items-center">
+                                        <div class="pl-4">
+                                            <img src="../assets/img/Calendar.svg" alt="" width="15px" height="15px">
+                                        </div>
+                                        <div class="px-2">
+                                            <p class="link-text m-0">Calendar</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start hover">
+                            <div class="px-3 py-4" (click)="onshowCollapse()">
+                                <a href="#">
+                                    <div class="d-flex align-items-center">
+                                        <div class="pl-4">
+                                            <img src="../assets/img/Help Center.svg" alt="" width="15px" height="15px">
+                                        </div>
+                                        <div class="px-2">
+                                            <p class="link-text m-0">Help Center</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start hover">
+                            <div class="px-3 py-4" (click)="onshowCollapse()">
+                                <a href="#">
+                                    <div class="d-flex align-items-center">
+                                        <div class="pl-4">
+                                            <img src="../assets/img/settings.svg" alt="" width="15px" height="15px">
+                                        </div>
+                                        <div class="px-2">
+                                            <p class="link-text m-0">Settings</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sidebar Not Active -->
+                <div id="sidebarActive" *ngIf="!sideBarActive" class="sticky-top">
+                    <div class="back">
+                        <div class="d-flex justify-content-center hover first-element-back" (click)="onshowCollapse()">
+                            <div class="px-3 py-4">
+                                <img src="../assets/img/menu.svg" alt="" width="20" height="20">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center hover">
+                            <div class="px-3 py-4">
+                                <a href="#"><img src="../assets/img/Home.svg" alt="" width="20" height="20"></a>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center hover">
+                            <div class="px-3 py-4">
+                                <a href="#"><img src="../assets/img/Dashboard.svg" alt="" width="20" height="20"></a>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center hover">
+                            <div class="px-3 py-4">
+                                <a href="#"><img src="../assets/img/Inbox.svg" alt="" width="20" height="20"></a>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center hover">
+                            <div class="px-3 py-4">
+                                <a href="#"><img src="../assets/img/Products.svg" alt="" width="20" height="20"></a>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center hover">
+                            <div class="px-3 py-4">
+                                <a href="#"><img src="../assets/img/Invoices.svg" alt="" width="20" height="20"></a>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center hover">
+                            <div class="px-3 py-4">
+                                <a href="#"><img src="../assets/img/Customers.svg" alt="" width="20" height="20"></a>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center hover">
+                            <div class="px-3 py-4">
+                                <a href="#"><img src="../assets/img/Chat Room.svg" alt="" width="20" height="20"></a>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center hover">
+                            <div class="px-3 py-4">
+                                <a href="#"><img src="../assets/img/Calendar.svg" alt="" width="20" height="20"></a>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center hover">
+                            <div class="px-3 py-4">
+                                <a href="#"><img src="../assets/img/Help Center.svg" alt="" width="20" height="20"></a>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center hover">
+                            <div class="px-3 py-4">
+                                <a href="#"><img src="../assets/img/settings.svg" alt="" width="20" height="20"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div [ngClass]="{'col-xl-10' : sideBarActive , 'col-xl-11' : !sideBarActive , 'col-md-9' : sideBarActive , 'col-md-11' : !sideBarActive}">
+                <!-- Page Content  -->
+                <div id="content">
+                    <div class="bg-white sticky-top">
+                        <div class="d-flex align-items-center py-2 px-3">
+                            <div class="flex-grow-1">
+                                <form class="form" action="index.html">
+                                    <div class="d-flex align-items-center">
+                                        <div class="pl-2">
+                                            <img src="../assets/img/icon-search.svg" alt="" width="20px" height="20px">
+                                        </div>
+                                        <div class="px-2 flex-grow-1">
+                                            <div class="form-group mb-0">
+                                                <input type="text" class="form-control search-text"
+                                                    placeholder="Search transactions, invoices or help"
+                                                    style="color:#4d4f5c;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="px-3">
+                                <img src="../assets/img/Support.svg" alt="" width="15px" height="15px">
+                            </div>
+                            <div class="px-3">
+                                <img src="../assets/img/ChatIcon.svg" alt="" width="15px" height="15px">
+                            </div>
+                            <div class="px-3">
+                                <img src="../assets/img/Notification.svg" alt="" width="25px" height="25px">
+                            </div>
+                            <div class="pl-3" style="border-left:1px solid #ebebf2;">
+                                <div class="dropdown">
+                                    <button class="p-1 border-0" type="button" data-toggle="dropdown"
+                                        data-target="dropdown-menu">John Doe
+                                        <span> <img src="../assets/img/down.svg" alt="" width="11px" height="11px"
+                                                class="ml-1"></span></button>
+                                    <div class="dropdown-menu">
+                                        <div class="text-center">
+                                            <div
+                                                class="dropdown-item py-2 border border-right-0 border-top-0 border-left-0">
+                                                <p class="form-text mb-0" style="font-size:13px; cursor: pointer;">
+                                                    <strong class="font-weight-bold">Status :</strong> Online</p>
+                                            </div>
+                                            <div
+                                                class="dropdown-item py-2 border border-right-0 border-top-0 border-left-0">
+                                                <p class="form-text mb-0" style="font-size:13px; cursor: pointer;">
+                                                    Account
+                                                    setting</p>
+                                            </div>
+                                            <div
+                                                class="dropdown-item py-2 border border-right-0 border-top-0 border-left-0">
+                                                <p class="form-text mb-0" style="font-size:13px;cursor: pointer;">
+                                                    Feedback</p>
+                                            </div>
+                                            <div
+                                                class="dropdown-item py-2 border border-right-0 border-top-0 border-left-0">
+                                                <p class="form-text mb-0" style="font-size:13px;cursor: pointer;">Logout
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pl-2 pr-4">
+                                <img src="../assets/img/Avatar.png" alt="" width="40px" height="40px">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Overview -->
+                    <div class="container py-2">
+                        <p class="text1 mb-0">Overview</p>
+                        <div class="row py-2">
+                            <div class="col-md-4">
+                                <div class="bg-white back-shadow w-100">
+                                    <div class="mx-2 my-1 p-2">
+                                        <p class="text2">Total View</p>
+                                    </div>
+                                    <div class="d-flex align-items-center px-2">
+                                        <div class="px-2">
+                                            <div class="text-left">
+                                                <p class="text3 mb-1">246K</p>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="px-">
+                                                        <p class="mb-0 text4">13.8% as</p>
+                                                    </div>
+                                                    <div class="px-1">
+                                                        <img src="../assets/img/down-arrow.svg" alt="" width="10px"
+                                                            height="10px">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ml-auto">
+                                            <canvas id="canvas1" #myCanvas1 width="112" height="40"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="bg-white back-shadow w-100">
+                                    <div class="mx-2 my-1 p-2">
+                                        <p class="text2">Products Sold</p>
+                                    </div>
+                                    <div class="d-flex align-items-center px-2">
+                                        <div class="px-2">
+                                            <div class="text-left">
+                                                <p class="text3 mb-1">2453</p>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="px-1">
+                                                        <p class="mb-0 text5">13.8%</p>
+                                                    </div>
+                                                    <div class="px-1">
+                                                        <img src="../assets/img/up-arrow.svg" alt="" width="10px"
+                                                            height="10px">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ml-auto">
+                                            <canvas id="canvas1" #myCanvas2 width="112" height="40"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="bg-white back-shadow w-100">
+                                    <div class="mx-2 my-1 p-2">
+                                        <p class="text2">Total Earnings</p>
+                                    </div>
+                                    <div class="d-flex align-items-center px-2">
+                                        <div class="px-2">
+                                            <div class="text-left">
+                                                <p class="text3 mb-1">$39K</p>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="px-1">
+                                                        <p class="mb-0 text4">13.8%</p>
+                                                    </div>
+                                                    <div class="px-1">
+                                                        <img src="../assets/img/down-arrow.svg" alt="" width="10px"
+                                                            height="10px">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ml-auto">
+                                            <canvas id="canvas1" #myCanvas3 width="112" height="40"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Statistics -->
+                    <div id="statistics" class="py-2">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="bg-white back-shadow">
+                                        <div class="mx-2 my-1 px-2 py-4">
+                                            <div class="d-flex flex-row">
+                                                <div class="mr-auto my-auto">
+                                                    <p class="text6 mb-0">Statistics</p>
+                                                </div>
+                                                <div class="my-auto">
+                                                    <div class="btn1 px-3 py-2">
+                                                        <a href="#" class="text7 mb-0">Last 6 months <span> <img
+                                                                    src="../assets/img/down.svg" alt="" width="11px"
+                                                                    height="11px" class="ml-2"></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="my-4">
+                                                <canvas id="Canvas4" #myCanvas4></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Table Section -->
+                    <div id="table" class="py-2">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 m-0">
+                                    <div class="bg-white back-shadow w-100">
+                                        <div class="mx-2 my-1 px-2 py-4">
+                                            <p class="text6">Referrer</p>
+                                            <div class="p-2">
+                                                <div class="table-responsive">
+                                                    <table class="table table-hover">
+                                                        <thead>
+                                                            <tr class="bg-color">
+                                                                <td>
+                                                                    <p class="text9 mb-0">LOCATION</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text9 mb-0">VIEWS</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text9 mb-0">SALES</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text9 mb-0">CONVERSION</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text9 mb-0">TOTAL</p>
+                                                                </td>
 
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text7 mb-0">google.com</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text7 mb-0">3746</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text7 mb-0">752</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text7 mb-0">43%</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text7 mb-0">$19,291</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text7 mb-0">facebook.com</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text7 mb-0">8126</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text7 mb-0">728</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text7 mb-0">32%</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text7 mb-0">$17,638</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text7 mb-0">twitter.com</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text7 mb-0">8836</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text7 mb-0">694</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text7 mb-0">28%</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text7 mb-0">$16,218</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text7 mb-0">Direct, email, IM</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text7 mb-0">1173</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text7 mb-0">645</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text7 mb-0">24%</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text7 mb-0">$14,421</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p class="text7 mb-0">linkedin.com</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text7 mb-0">2739</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text7 mb-0">539</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text7 mb-0">20%</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text7 mb-0">$12,370</p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr
+                                                                class="border border-top-0 border-right-0 border-left-0">
+                                                                <td>
+                                                                    <p class="text7 mb-0">dribbble.com</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text7 mb-0">1762</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text7 mb-0">432</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text7 mb-0">18%</p>
+                                                                </td>
+                                                                <td>
+                                                                    <p class="text7 mb-0">$9,928</p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <button class="btn">
+                                                <a href="#" class="text8">Show More</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 m-0">
+                                    <div class="bg-white back-shadow w-100">
+                                        <div class="mx-2 my-1 px-2 py-4">
+                                            <div class="d-flex flex-row">
+                                                <div class="mr-auto my-auto">
+                                                    <p class="text6 mb-0">Details on Map</p>
+                                                </div>
+                                                <div class="my-auto">
+                                                    <button class="btn">
+                                                        <a href="#" class="text8">Show All List</a>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="my-4">
+                                                <img src="../assets/img/Map.svg" alt="" class="img-responsive w-100">
+                                            </div>
+                                            <hr>
+                                            <div class="d-flex flex-row">
+                                                <div class="mr-auto my-auto">
+                                                    <div class="p-1">
+                                                        <div class="d-inline-flex">
+                                                            <div class="px-1 mx-auto my-auto">
+                                                                <div class="outer-circle1"></div>
+                                                            </div>
+                                                            <div class="mx-auto my-auto px-1">
+                                                                <p class="text7 mb-0">Canada</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="my-auto">
+                                                    <p class="mb-0 text7">$29,193</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-row">
+                                                <div class="mr-auto my-auto">
+                                                    <div class="p-1">
+                                                        <div class="d-inline-flex">
+                                                            <div class="px-1 mx-auto my-auto">
+                                                                <div class="outer-circle2"></div>
+                                                            </div>
+                                                            <div class="mx-auto my-auto px-1">
+                                                                <p class="text7 mb-0">Brazil</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="my-auto">
+                                                    <p class="mb-0 text7">$18,832</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-row">
+                                                <div class="mr-auto my-auto">
+                                                    <div class="p-1">
+                                                        <div class="d-inline-flex">
+                                                            <div class="px-1 mx-auto my-auto">
+                                                                <div class="outer-circle3"></div>
+                                                            </div>
+                                                            <div class="mx-auto my-auto px-1">
+                                                                <p class="text7 mb-0">Egypt</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="my-auto">
+                                                    <p class="mb-0 text7">$19,758</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-row">
+                                                <div class="mr-auto my-auto">
+                                                    <div class="p-1">
+                                                        <div class="d-inline-flex">
+                                                            <div class="px-1 mx-auto my-auto">
+                                                                <div class="outer-circle4"></div>
+                                                            </div>
+                                                            <div class="mx-auto my-auto px-1">
+                                                                <p class="text7 mb-0">Russia</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="my-auto">
+                                                    <p class="mb-0 text7">$23,078</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-row">
+                                                <div class="mr-auto my-auto">
+                                                    <div class="p-1">
+                                                        <div class="d-inline-flex">
+                                                            <div class="px-1 mx-auto my-auto">
+                                                                <div class="outer-circle5"></div>
+                                                            </div>
+                                                            <div class="mx-auto my-auto px-1">
+                                                                <p class="text7 mb-0">China</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="my-auto">
+                                                    <p class="mb-0 text7">$29,193</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-row">
+                                                <div class="mr-auto my-auto">
+                                                    <div class="p-1">
+                                                        <div class="d-inline-flex">
+                                                            <div class="px-1 mx-auto my-auto">
+                                                                <div class="outer-circle6"></div>
+                                                            </div>
+                                                            <div class="mx-auto my-auto px-1">
+                                                                <p class="text7 mb-0">Australia</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="my-auto">
+                                                    <p class="mb-0 text7">$37,760</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

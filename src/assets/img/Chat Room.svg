@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+    <defs>
+        <style>
+            .cls-1{fill:#a5a4bf}
+        </style>
+    </defs>
+    <g id="Chat_Room" data-name="Chat Room" transform="translate(-20 -387)">
+        <g id="icon_chat-room" transform="translate(-235 296)">
+            <path id="Union_11" d="M11-382H6l1.828-2H14a1 1 0 0 0 1-1v-6h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-2v3zm-7-4H2a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7l-3 3z" class="cls-1" data-name="Union 11" transform="translate(254 486)"/>
+        </g>
+    </g>
+</svg>
